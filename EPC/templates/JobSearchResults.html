@@ -1,0 +1,10 @@
+{% if job_listings %}
+    <h2>Search Results</h2>
+    <ul>
+    {% for job in job_listings %}
+        <li>{{ job.title }} - {{ job.company_name }} - {{ job.job_location }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No job listings found.</p>
+{% endif %}

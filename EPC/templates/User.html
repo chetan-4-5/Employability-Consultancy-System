@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-/c2gZ5vzZlWaDj5em5e5vpxu2sVJdKc+M7eLkcL1q3FhBb9XCIo7BZZzbJyUoKn6gKKj6UeiS6l+hOZbJ7xk8Q=="
+        crossorigin="anonymous" />
+  <style>
+    /* custom styles for user homepage */
+    .navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* header styles */
+.navbar-custom {
+    background-color: #333;
+    border-bottom: 3px solid #ffc107;
+    background-color: #007bff; /* added class */
+}
+
+
+.navbar-custom .navbar-brand {
+    color: #fff;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+}
+
+/* hero image styles */
+.hero-image {
+    background-image: url("https://images.pexels.com/photos/940076/pexels-photo-940076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    /* added class */
+    text-white;
+}
+
+
+.hero-text h1 {
+    font-size: 4rem;
+}
+
+/* card styles */
+.card{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* added classes */
+    bg-light text-dark;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    text-align: center;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+.card-body i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* utility classes */
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+  </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Employability Consultancy System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page content -->
+    <div class="container mt-5">
+        <h1>Welcome to Employability Consultancy System</h1>
+        <p class="lead">Find your dream job and take the next step in your career.</p>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user-tie"></i> My Profile</h5>
+                        <p class="card-text">View and edit your profile information.</p>
+                        <a href="userprofile" class="btn btn-primary">Go to profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-search"></i> Job Search</h5>
+                                              <p class="card-text">Search for job openings that match your skills and experience.</p>
+                        <a href="jobsearch" class="btn btn-primary">Go to job search</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-file-alt"></i> My Applications</h5>
+                        <p class="card-text">View and manage your job applications.</p>
+                        <a href="applications" class="btn btn-primary">Go to applications</a>
+                    </div>
+                </div>
+            </div>
+          <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Skill Assessment</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Take our assessment to see where you stand</h6>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu dapibus est, sed tempus quam. Aliquam vulputate, urna eu commodo aliquam, neque lorem vehicula elit, quis tristique justo ex eu turpis.</p>
+        <a href="assessment" class="btn btn-primary">Take Assessment</a>
+    </div>
+</div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+

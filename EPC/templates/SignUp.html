@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .signup-container {
+  margin-top: 50px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+  animation: slide-in-fwd-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  font-size: 18px;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #FF6B6B;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #FF4E4E;
+}
+
+.login-link {
+  text-align: center;
+  margin
+
+  </style>
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6 signup-container">
+				<h1>Sign up for Employability Consultancy System</h1>
+				<form method="POST" action="{% url 'signup' %}">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="name">Full Name</label>
+						<input type="text" class="form-control" id="name" name="name" required>
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" class="form-control" id="email" name="email" required>
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" class="form-control" id="password" name="password" required>
+					</div>
+					<div class="form-group">
+						<label for="confirm-password">Confirm Password</label>
+						<input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone Number</label>
+						<input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required>
+					</div>
+					<button type="submit" class="btn btn-primary">Sign up</button>
+				</form>
+				<div class="login-link">Already have an account? <a href="#">Log in</a></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
